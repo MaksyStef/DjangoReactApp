@@ -11,8 +11,8 @@ function App() {
         <Route path="/todos" element={<Todo />} />
         <Route path="/hello-world" element={<HelloWorld />}/>
         <Route path="/props-inherit">
-          <Route path="/props-inherit/function" element={<FunctionsInheretingPropsParent greetings="Welcome" />} />
-          <Route path="/props-inherit/class" element={<ClassesInheretingPropsParent greetings="Welcome" />} />
+          <Route path="/props-inherit/function" element={<FunctionsInheretingPropsParent greetings="This text is inherited" />} />
+          <Route path="/props-inherit/class" element={<ClassesInheretingPropsParent greetings="This text is inherited" />} />
         </Route>
       </Routes>
     </BrowserRouter>
