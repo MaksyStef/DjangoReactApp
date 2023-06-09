@@ -1,4 +1,4 @@
-import Child from "./components/InheretingPropsChild.js";
+import Child from "./components/FunctionsInheretingPropsChild.js";
 
 export default function Parent (props) {
   return (
