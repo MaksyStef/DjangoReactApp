@@ -7,11 +7,13 @@ import ClassesInheretingPropsParent from './ClassesInheretingPropsParent.js';
 import EventHandle from './EventHandle.js';
 import UseImageAsset from './UseImageAsset.js';
 import UseVideoAsset from './UseVideoAsset.js';
+import Calculator from './Calculator.js';
 function App() {
   return (
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
+          <Route path="/calculator" element={<Calculator />} />
           <Route path="/todos" element={<Todo />} />
           <Route path="/hello-world" element={<HelloWorld />}/>
           <Route path="/props-inherit">
