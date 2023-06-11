@@ -3,6 +3,7 @@ import Todo from './Todo.js'
 import HelloWorld from './HelloWorld.js'
 import FunctionsInheretingPropsParent from './FunctionsInheretingPropsParent.js'
 import ClassesInheretingPropsParent from './ClassesInheretingPropsParent.js'
+import EventHandle from './EventHandle.js'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/props-inherit/function" element={<FunctionsInheretingPropsParent greetings="This text is inherited" />} />
           <Route path="/props-inherit/class" element={<ClassesInheretingPropsParent greetings="This text is inherited" />} />
         </Route>
+        <Route path="/events-handle" element={<EventHandle />}/>
       </Routes>
     </BrowserRouter>
   );
