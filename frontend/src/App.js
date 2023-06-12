@@ -9,6 +9,7 @@ import UseImageAsset from './UseImageAsset.js';
 import UseVideoAsset from './UseVideoAsset.js';
 import Calculator from './Calculator.js';
 import RenderList from './RenderLists.js';
+import UseContextApp from './UseContextApp.js';
 function App() {
   return (
     <React.StrictMode>
@@ -27,6 +28,7 @@ function App() {
             <Route path="/use-asset/video" element={<UseVideoAsset />} />
           </Route>
           <Route path="/render-list" element={<RenderList />}/>
+          <Route path="/use-context" element={<UseContextApp />}/>
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
