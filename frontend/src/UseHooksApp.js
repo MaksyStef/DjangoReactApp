@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Table } from "reactstrap";
+import { useEffect, useState, useReducer } from "react";
+import { Table, Card, CardBody, CardFooter, CardTitle, CardSubtitle, CardColumns } from "reactstrap";
 
 function DataTable(props) {
   const [state, setState] = useState([])
@@ -44,10 +44,33 @@ function DataTable(props) {
   )
 }
 
+const walletReducer = (state, action) => {
+  if (action.type === 'recieve') return {money: state.money + 10};
+  if (action.type === 'spend') return {money: state.money - 10};
+  return state;
+}
+function WalletState(props) {
+
+  const [state, dispatch] = useReducer(walletReducer, {money: 0});
+
+  return (
+    <Card>
+      <CardBody>
+        <CardTitle>Current balance:</CardTitle>
+        <CardSubtitle>{state.money}</CardSubtitle>
+      </CardBody>
+      <CardFooter>
+        <button onClick={()=>{dispatch({type:'recieve'})}}>Recieve Salary</button>
+        <button onClick={()=>{dispatch({type:'spend'})}}>Spend Earnings</button>
+      </CardFooter>
+    </Card>
+  )
+}
 export default function UseHooksApp (props) {
   return (
-    <div className="wrapper p-4 w-100 h-100 d-flex justify-content-center align-items-center">
+    <div className="wrapper p-4 w-100 min-h-100 d-flex flex-column justify-content-center align-items-center">
       <DataTable></DataTable>
+      <WalletState></WalletState>
     </div>
   )
 }
