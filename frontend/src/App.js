@@ -8,6 +8,7 @@ import EventHandle from './EventHandle.js';
 import UseImageAsset from './UseImageAsset.js';
 import UseVideoAsset from './UseVideoAsset.js';
 import Calculator from './Calculator.js';
+import RenderList from './RenderLists.js';
 function App() {
   return (
     <React.StrictMode>
@@ -25,6 +26,7 @@ function App() {
             <Route path="/use-asset/image" element={<UseImageAsset />} />
             <Route path="/use-asset/video" element={<UseVideoAsset />} />
           </Route>
+          <Route path="/render-list" element={<RenderList />}/>
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
