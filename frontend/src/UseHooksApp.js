@@ -68,7 +68,7 @@ function WalletState(props) {
 }
 export default function UseHooksApp (props) {
   return (
-    <div className="wrapper p-4 w-100 min-h-100 d-flex flex-column justify-content-center align-items-center">
+    <div className="wrapper p-4 w-100 min-vh-100 d-flex flex-column justify-content-center align-items-center">
       <DataTable></DataTable>
       <WalletState></WalletState>
     </div>

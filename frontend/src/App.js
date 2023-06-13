@@ -11,6 +11,7 @@ import Calculator from './Calculator.js';
 import RenderList from './RenderLists.js';
 import UseContextApp from './UseContextApp.js';
 import UseHooksApp from './UseHooksApp.js';
+import HocTechniqueApp from './HocTechniqueApp.js';
 function App() {
   return (
     <React.StrictMode>
@@ -31,6 +32,7 @@ function App() {
           <Route path="/render-list" element={<RenderList />}/>
           <Route path="/use-context" element={<UseContextApp />}/>
           <Route path="/use-hooks" element={<UseHooksApp />}/>
+          <Route path="/hoc-technique" element={<HocTechniqueApp />}/>
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
