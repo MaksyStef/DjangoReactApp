@@ -1,38 +1,40 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Todo from './Todo.js';
-import HelloWorld from './HelloWorld.js';
-import FunctionsInheretingPropsParent from './FunctionsInheretingPropsParent.js';
-import ClassesInheretingPropsParent from './ClassesInheretingPropsParent.js';
-import EventHandle from './EventHandle.js';
-import UseImageAsset from './UseImageAsset.js';
-import UseVideoAsset from './UseVideoAsset.js';
-import Calculator from './Calculator.js';
-import RenderList from './RenderLists.js';
+import TodoApp from './Todo.js';
+import HelloWorldApp from './HelloWorld.js';
+import FunctionsInheretingPropsParentApp from './FunctionsInheretingPropsParent.js';
+import ClassesInheretingPropsParentApp from './ClassesInheretingPropsParent.js';
+import EventHandleApp from './EventHandle.js';
+import UseImageAssetApp from './UseImageAsset.js';
+import UseVideoAssetApp from './UseVideoAsset.js';
+import CalculatorApp from './Calculator.js';
+import RenderListApp from './RenderLists.js';
 import UseContextApp from './UseContextApp.js';
 import UseHooksApp from './UseHooksApp.js';
 import HocTechniqueApp from './HocTechniqueApp.js';
+import RenderPropApp from './RenderProp.js';
 function App() {
   return (
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
-          <Route path="/calculator" element={<Calculator />} />
-          <Route path="/todos" element={<Todo />} />
-          <Route path="/hello-world" element={<HelloWorld />}/>
+          <Route path="/hello-world" element={<HelloWorldApp />}/>
+          <Route path="/calculator" element={<CalculatorApp />} />
+          <Route path="/todos" element={<TodoApp />} />
           <Route path="/props-inherit">
-            <Route path="/props-inherit/function" element={<FunctionsInheretingPropsParent greetings="This text is inherited" />} />
-            <Route path="/props-inherit/class" element={<ClassesInheretingPropsParent greetings="This text is inherited" />} />
+            <Route path="/props-inherit/function" element={<FunctionsInheretingPropsParentApp greetings="This text is inherited" />} />
+            <Route path="/props-inherit/class" element={<ClassesInheretingPropsParentApp greetings="This text is inherited" />} />
           </Route>
-          <Route path="/events-handle" element={<EventHandle />}/>
+          <Route path="/events-handle" element={<EventHandleApp />}/>
           <Route path="/use-asset">
-            <Route path="/use-asset/image" element={<UseImageAsset />} />
-            <Route path="/use-asset/video" element={<UseVideoAsset />} />
+            <Route path="/use-asset/image" element={<UseImageAssetApp />} />
+            <Route path="/use-asset/video" element={<UseVideoAssetApp />} />
           </Route>
-          <Route path="/render-list" element={<RenderList />}/>
+          <Route path="/render-list" element={<RenderListApp />}/>
           <Route path="/use-context" element={<UseContextApp />}/>
           <Route path="/use-hooks" element={<UseHooksApp />}/>
           <Route path="/hoc-technique" element={<HocTechniqueApp />}/>
+          <Route path="/render-prop" element={<RenderPropApp />}/>
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
