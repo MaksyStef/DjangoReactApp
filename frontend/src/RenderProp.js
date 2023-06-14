@@ -78,7 +78,7 @@ export default class RenderPropApp extends Component {
   }
   render() {
     return (
-      <Wrapper>
+      <Wrapper style={{gap: "84px"}}>
         <FetchData url={"https://jsonplaceholder.typicode.com/todos"} render={RenderTodo} />
         <FetchData url={"https://jsonplaceholder.typicode.com/comments"} render={RenderComments} />
       </Wrapper>

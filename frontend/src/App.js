@@ -13,11 +13,13 @@ import UseContextApp from './UseContextApp.js';
 import UseHooksApp from './UseHooksApp.js';
 import HocTechniqueApp from './HocTechniqueApp.js';
 import RenderPropApp from './RenderProp.js';
+import IndexApp from './IndexApp.js';
 function App() {
   return (
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
+          <Route path="" element={<IndexApp />} />
           <Route path="/hello-world" element={<HelloWorldApp />}/>
           <Route path="/calculator" element={<CalculatorApp />} />
           <Route path="/todos" element={<TodoApp />} />
